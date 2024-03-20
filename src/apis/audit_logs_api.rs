@@ -63,7 +63,7 @@ pub async fn get_detailed_audit_log(configuration: &configuration::Configuration
     }
 }
 
-pub async fn list_audit_logs(configuration: &configuration::Configuration, proj_id: &str, env_id: &str, pdp_id: Option<&str>, users: Option<Vec<String>>, decision: Option<bool>, resources: Option<Vec<String>>, tenant: Option<&str>, action: Option<&str>, timestamp_from: Option<i32>, timestamp_to: Option<i32>, sort_by: Option<models::models::AuditLogSortKey>, page: Option<i32>, per_page: Option<i32>) -> Result<models::LimitedPaginatedResultAuditLogModel, Error<ListAuditLogsError>> {
+pub async fn list_audit_logs(configuration: &configuration::Configuration, proj_id: &str, env_id: &str, pdp_id: Option<&str>, users: Option<Vec<String>>, decision: Option<bool>, resources: Option<Vec<String>>, tenant: Option<&str>, action: Option<&str>, timestamp_from: Option<i32>, timestamp_to: Option<i32>, sort_by: Option<models::AuditLogSortKey>, page: Option<i32>, per_page: Option<i32>) -> Result<models::LimitedPaginatedResultAuditLogModel, Error<ListAuditLogsError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

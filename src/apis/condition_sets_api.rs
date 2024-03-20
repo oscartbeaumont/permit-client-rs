@@ -241,7 +241,7 @@ pub async fn get_condition_set_descendants(configuration: &configuration::Config
 }
 
 /// Lists all condition sets matching a filter.
-pub async fn list_condition_sets(configuration: &configuration::Configuration, proj_id: &str, env_id: &str, search: Option<&str>, r#type: Option<models::models::ConditionSetType>, include_total_count: Option<bool>, page: Option<i32>, per_page: Option<i32>) -> Result<models::ResponseListConditionSetsV2SchemaProjIdEnvIdConditionSetsGet, Error<ListConditionSetsError>> {
+pub async fn list_condition_sets(configuration: &configuration::Configuration, proj_id: &str, env_id: &str, search: Option<&str>, r#type: Option<models::ConditionSetType>, include_total_count: Option<bool>, page: Option<i32>, per_page: Option<i32>) -> Result<models::ResponseListConditionSetsV2SchemaProjIdEnvIdConditionSetsGet, Error<ListConditionSetsError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

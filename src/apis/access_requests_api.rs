@@ -231,7 +231,7 @@ pub async fn get_access_request(configuration: &configuration::Configuration, pr
     }
 }
 
-pub async fn list_access_requests(configuration: &configuration::Configuration, proj_id: &str, elements_config_id: &str, env_id: &str, status: Option<models::models::RequestStatus>, tenant: Option<&str>, role: Option<&str>, resource: Option<&str>, resource_instance: Option<&str>, page: Option<i32>, per_page: Option<i32>) -> Result<models::PaginatedResultAccessRequestRead, Error<ListAccessRequestsError>> {
+pub async fn list_access_requests(configuration: &configuration::Configuration, proj_id: &str, elements_config_id: &str, env_id: &str, status: Option<models::RequestStatus>, tenant: Option<&str>, role: Option<&str>, resource: Option<&str>, resource_instance: Option<&str>, page: Option<i32>, per_page: Option<i32>) -> Result<models::PaginatedResultAccessRequestRead, Error<ListAccessRequestsError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
