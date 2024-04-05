@@ -151,7 +151,7 @@ pub async fn bulk_unassign_role(configuration: &configuration::Configuration, pr
 }
 
 /// Lists the role assignments defined within an environment.  - If the `user` filter is present, will only return the role assignments of that user. - If the `tenant` filter is present, will only return the role assignments in that tenant. - If the `role` filter is present, will only return role assignments that are granting that role.
-pub async fn list_role_assignments(configuration: &configuration::Configuration, proj_id: &str, env_id: &str, user: Option<&str>, role: Option<&str>, tenant: Option<&str>, resource: Option<&str>, resource_instance: Option<&str>, detailed: Option<bool>, page: Option<i32>, per_page: Option<i32>) -> Result<models::ResponseListRoleAssignmentsV2FactsProjIdEnvIdRoleAssignmentsGet, Error<ListRoleAssignmentsError>> {
+pub async fn list_role_assignments(configuration: &configuration::Configuration, proj_id: &str, env_id: &str, user: Option<&str>, role: Option<&str>, tenant: Option<&str>, resource: Option<&str>, resource_instance: Option<&str>, detailed: Option<bool>, page: Option<i32>, per_page: Option<i32>) -> Result<Vec<models::ResponseListRoleAssignmentsV2FactsProjIdEnvIdRoleAssignmentsGet>, Error<ListRoleAssignmentsError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

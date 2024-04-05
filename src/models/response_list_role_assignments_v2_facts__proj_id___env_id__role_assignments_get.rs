@@ -12,25 +12,24 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct ResponseListRoleAssignmentsV2FactsProjIdEnvIdRoleAssignmentsGet {
-    id: String,
-    user: String,
-    role: String,
-    tenant: Option<String>,
-    resource_instance: Option<String>,
-    resource_instance_id: Option<String>,
-    user_id: String,
-    role_id: String,
-    tenant_id: String,
-    organization_id: String,
-    project_id: String,
-    environment_id: String,
-    created_at: String,
+    pub id: String,
+    pub user: String,
+    pub role: String,
+    pub tenant: Option<String>,
+    pub resource_instance: Option<String>,
+    pub resource_instance_id: Option<String>,
+    pub user_id: String,
+    pub role_id: String,
+    pub tenant_id: String,
+    pub organization_id: String,
+    pub project_id: String,
+    pub environment_id: String,
+    pub created_at: String,
 }
 
 impl ResponseListRoleAssignmentsV2FactsProjIdEnvIdRoleAssignmentsGet {
     pub fn new() -> ResponseListRoleAssignmentsV2FactsProjIdEnvIdRoleAssignmentsGet {
-        ResponseListRoleAssignmentsV2FactsProjIdEnvIdRoleAssignmentsGet {
-        }
+        Default::default()
     }
 }
 
