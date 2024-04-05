@@ -12,6 +12,19 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct ResponseListRoleAssignmentsV2FactsProjIdEnvIdRoleAssignmentsGet {
+    id: String,
+    user: String,
+    role: String,
+    tenant: Option<String>,
+    resource_instance: Option<String>,
+    resource_instance_id: Option<String>,
+    user_id: String,
+    role_id: String,
+    tenant_id: String,
+    organization_id: String,
+    project_id: String,
+    environment_id: String,
+    created_at: String,
 }
 
 impl ResponseListRoleAssignmentsV2FactsProjIdEnvIdRoleAssignmentsGet {
